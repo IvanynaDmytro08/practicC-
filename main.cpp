@@ -1,8 +1,17 @@
 #include <iostream>
 
+
+class Array{
+
+};
+
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << "My name is Dmytro" << std::endl;
+
+    int size;
+
+    std::cout << "Input size " << std::endl;
+    std::cin >> size;
 
     return 0;
 }
