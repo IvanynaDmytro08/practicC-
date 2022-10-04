@@ -16,7 +16,6 @@ public:
 
     ~Array(){delete[] array;};
 
-
     void setNewSize (int newSize) {
         this->size = newSize;
     }
@@ -109,8 +108,15 @@ int main () {
     int newSize;
 
 
-    std::cout << "Input size your array " << std::endl;
-    std::cin >> size;
+    do {
+        std::cout << "Input size your array - ";
+        std:: cin >> size;
+
+        if (size <= 0)
+            std::cout << "You have wrong " << std::endl;
+
+    } while (size <= 0);
+
 
     Array array(size);
 
@@ -139,5 +145,4 @@ int main () {
 
     array.setNewSize(newSize);
     std::cout << "New size array - " << array.getSize() << std::endl;
-
 }
